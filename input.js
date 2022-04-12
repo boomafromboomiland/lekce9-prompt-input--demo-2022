@@ -3,7 +3,7 @@ function vypocitajBMI() {
   let vyskaMetry = parseFloat(document.querySelector('input[name=vyska]').value / 100); //z tohto dostaneme textový reťazec --> pridáme parseFloat
   let vahaKilogramy = parseFloat(document.querySelector('input[name=vaha]').value); //z tohto dostaneme textový reťazec --> pridáme parseFloat
   return BMI = Math.round(vahaKilogramy / Math.pow(vyskaMetry, 2)); //výpočet BMI, nič sa nestane, nemá čo funckiu zavolať
-  //vypisBMI(BMI);
+  //vypisBMI(BMI); --> súčasť refactoringu, function vypocitajVypisBMI
 };
 
 // funckia pre zapísanie BMI do User Interface (UI)
