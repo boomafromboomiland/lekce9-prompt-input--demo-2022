@@ -1,0 +1,11 @@
+// funkcia pre výpočet BMI = (weight) / (height * height)
+function vypocitajBMI() {
+  let vyskaMetry = parseFloat(document.querySelector('input[name=vyska]').value / 100); //z tohto dostaneme textový reťazec --> pridáme parseFloat
+  let vahaKilogramy = parseFloat(document.querySelector('input[name=vaha]').value); //z tohto dostaneme textový reťazec --> pridáme parseFloat
+  let BMI = Math.round(vahaKilogramy / Math.pow(vyskaMetry, 2)); //výpočet BMI, nič sa nestane, nemá čo funckiu zavolať
+  console.log(BMI);
+};
+
+document.querySelectorAll('input').forEach((element) => {
+  element.addEventListener('change', vypocitajBMI);
+});
